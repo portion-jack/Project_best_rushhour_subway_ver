@@ -109,9 +109,8 @@ def get_congest(station_name,station_line):
                     tmp_df=pd.DataFrame(cc_df['data'].reset_index(drop=True)[i])
                     tmp_df['up_down'] = line
                     tmp_list.append(tmp_df)
-                total_df.append(pd.concat(tmp_list))    
+                total_df.append(pd.concat(tmp_list))
         df_2_cleaned=pd.concat(total_df)
-
         df_2_cleaned.reset_index(drop=True,inplace=True)
         for i in range(len(df_2_cleaned['congestionCar'][0])):
             df_2_cleaned[f'congestion_{i}']=df_2_cleaned['congestionCar'].apply(lambda x: x[i])

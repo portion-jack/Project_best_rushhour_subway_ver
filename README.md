@@ -3,11 +3,19 @@
 ## TOOLS
 
 ```
---data--
-apache_spark
-pandas 
-seaborn
+API to Insight
+making pipeline
 ```
+
+### imgs
+
+<img width="1721" alt="Screen Shot 2022-12-26 at 18 40 48" src="https://user-images.githubusercontent.com/112222918/209533276-72878243-6807-436d-bba5-4b4439c9c468.png">
+
+<img width="1717" alt="Screen Shot 2022-12-26 at 18 37 25" src="https://user-images.githubusercontent.com/112222918/209533054-c13e5eea-de4e-4767-b80f-cbefd710ac9b.png">
+
+<img width="1607" alt="Screen Shot 2022-12-26 at 18 38 23" src="https://user-images.githubusercontent.com/112222918/209533095-1c940310-9d08-4842-aaa0-0c575fd1aab5.png">
+
+
 
 #### REPO structure
 
