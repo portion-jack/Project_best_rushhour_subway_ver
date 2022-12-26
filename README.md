@@ -11,68 +11,40 @@ seaborn
 
 #### REPO structure
 
+#### REPO structure
+
 ```
 .
+├── main_pipeline.ipynb # pipeline by ipynb
+├── pipe_line_py.py # pipeline by py
 ├── README.md
-├── _main_.ipynb
-├── codes_get_data
-│   ├── __pycache__
-│   │   └── get_congest_func.cpython-310.pyc
-│   ├── get_congest_func.py
-│   └── get_congest_subway.py
-├── data
-│   ├── StationCode_mapper.csv
-│   └── final_data
-│       ├── 을지로3가역_2호선_congest.csv
-│       ├── 을지로3가역_2호선congest_section.csv
-│       ├── 을지로3가역_3호선_congest.csv
-│       ├── 을지로3가역_3호선congest_section.csv
-│       ├── 시청역_1호선_congest.csv
-│       ├── 종각역_1호선_congest.csv
-│       ├── 시청역_1호선congest_section.csv
-│       ├── 종각역_1호선congest_section.csv
-│       ├── 강남역_2호선_congest.csv
-│       ├── 선릉역_2호선_congest.csv
-│       ├── 시청역_2호선_congest.csv
-│       ├── 역삼역_2호선_congest.csv
-│       ├── 강남역_2호선congest_section.csv
-│       ├── 선릉역_2호선congest_section.csv
-│       ├── 시청역_2호선congest_section.csv
-│       ├── 역삼역_2호선congest_section.csv
-│       ├── 공덕역_5호선_congest.csv
-│       ├── 공덕역_5호선congest_section.csv
-│       ├── 공덕역_6호선_congest.csv
-│       ├── 공덕역_6호선congest_section.csv
-│       ├── 강남역_신분당선_congest.csv
-│       └── 강남역_신분당선congest_section.csv
-├── get_api_data.ipynb
-├── imgs
-│   ├── congest_info.png
-│   ├── congest_main_theme.png
-│   ├── data_source.png
-│   └── my_api_info.png
+│
 ├── main_codes
-│   ├── __pycache__
-│   │   ├── read_data.cpython-310.pyc
-│   │   └── show_congest_graph.cpython-310.pyc
-│   ├── read_data.py
-│   └── show_congest_graph.py
-├── main_pipeline.ipynb
-├── ppt
+│   ├── show_congest_sectional_graph.py # 칸별 혼잡도 데이터 전처리 및 그래프 생성
+│   ├── show_congest_graph.py # 역별 혼잡도 데이터 전처리 및 그래프 생성
+│   └── read_data.py # 칸별, 역별 혼잡도 데이터 읽어오기
+│
+├── codes_get_data 
+│   ├── get_congest.py # 역별 혼잡도 데이터 불러오기 api 불러와서 csv로 저장
+│   └── get_congest_subway.py # 칸별 혼잡도 데이터 불러오기 api 불러와서 csv로 저장
+│
 ├── prerprocessing
-│   ├── preprocessing_congest.py
-│   └── preprocessing_main.py
+│   ├── preprocessing_main.py # 역별 혼잡도 전처리 코드
+│   └── preprocessing_congest.py # 칸별 혼잡도 전처리 코드
+│
+├── data
+│   └── StationCode_mapper.csv # 역명에 대한 역명 코드 매퍼
+│
 ├── private
-│   ├── __pycache__
-│   │   └── _private_.cpython-310.pyc
-│   ├── _private_.py
+│   ├── _private_.py # api secrete key
 │   └── private.md
-├── todo.md
+│
+├── ppt
+│   ├── Presentation1.pptx # 발표 자료
+│   └── ~$Presentation1.pptx
 └── utils
-    ├── __pycache__
-    │   └── utils.cpython-310.pyc
-    └── utils.py
+    └── utils.py 
 
-13 directories, 46 files
+7 directories, 18 files
 
 ```
