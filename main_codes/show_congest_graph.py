@@ -64,7 +64,7 @@ def relative_graph_morning(df_congest,target_name,target_line):
         c='r',
     )
     plt.title(f'출근시간 {target_name}_{target_line} 혼잡도',fontsize=15)
-    plt.legend()
+    plt.legend(fontsize=15)
     plt.show()
 
 
@@ -120,6 +120,6 @@ def relative_graph_dinner(df_congest,target_name,target_line):
         c='r',
     )
     plt.title(f'퇴근시간 {target_name}_{target_line} 혼잡도',fontsize=15)
-    plt.legend()
+    plt.legend(fontsize=15)
     plt.show()
 
