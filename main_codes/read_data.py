@@ -6,8 +6,8 @@ plt.rcParams["date.autoformatter.minute"] = "%H:%M"
 plt.rcParams['font.family']='AppleGothic'
 
 
-def read_congest_section():
-    congest_path=glob.glob('data/final_data/*congest_section.csv')
+def read_congest_section(subwayline):
+    congest_path=glob.glob(f'data/final_data/*{subwayline}congest_section.csv')
 
     tmp_li = list()
     for congest in congest_path:
