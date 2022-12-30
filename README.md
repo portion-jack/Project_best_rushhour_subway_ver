@@ -7,6 +7,8 @@ API to Insight
 making pipeline
 ```
 
+-> 데이터 뭐가 있는지 없는지 자동체크 기능 추가 필요
+
 ### imgs
 
 <img width="1721" alt="Screen Shot 2022-12-26 at 18 40 48" src="https://user-images.githubusercontent.com/112222918/209533276-72878243-6807-436d-bba5-4b4439c9c468.png">
