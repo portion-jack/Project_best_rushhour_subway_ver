@@ -39,5 +39,6 @@ def get_data(stationname,subwayline,dow,hh):
     df_1.to_csv(f'preprocessed_data/01_{dow}_{hh}_{subwayline}_{stationname}.csv')
     df_2.to_csv(f'preprocessed_data/02_{dow}_{hh}_{subwayline}_{stationname}.csv')
     df_3.to_csv(f'preprocessed_data/03_{dow}_{hh}_{subwayline}_{stationname}.csv')
-    print('추출 완료')
+    
+    print(f'{stationname}_{subwayline}_{dow}_{hh} 데이터 추출 완료')
     return None
