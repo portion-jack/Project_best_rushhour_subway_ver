@@ -1,6 +1,6 @@
 # 최고의 출근시간 (지하철 ver)
 
-## TOOLS
+## Tools
 
 ```
 Data
@@ -23,7 +23,7 @@ Skills
     - using pivot table
 ```
 
-### imgs
+### Images
 
 <img width="1721" alt="Screen Shot 2022-12-26 at 18 40 48" src="https://user-images.githubusercontent.com/112222918/209533276-72878243-6807-436d-bba5-4b4439c9c468.png">
 
@@ -34,12 +34,12 @@ Skills
 ### Process
 
 ```
-input
+Input
 - 출발 지하철 역
 - 출발 지하철 노선 (except 경의중앙선, 분당선)
 - 가는 방향 (상행선/하행선)
 
-process
+Process
 1. find next station
 
 2. check and get current_station and next_station data
@@ -87,7 +87,5 @@ process
 │   ├── _private_.py
 │   └── private.md
 └── 지하철혼잡도활용_최적화.pdf
-
-10 directories, 27 files
 
 ```
