@@ -3,11 +3,25 @@
 ## TOOLS
 
 ```
-API to Insight
-making pipeline
-```
+Data
+    - SK open API
+    - Json
+    - csv
 
--> 데이터 뭐가 있는지 없는지 자동체크 기능 추가 필요
+Tools
+    - Database
+    - sqlight
+    - pandas
+    - numpy
+    - matplotlib
+    - seaborn
+
+Skills
+    - using API
+    - make data pipeline
+    - draw datetime related plot
+    - using pivot table
+```
 
 ### imgs
 
@@ -17,42 +31,63 @@ making pipeline
 
 <img width="1607" alt="Screen Shot 2022-12-26 at 18 38 23" src="https://user-images.githubusercontent.com/112222918/209533095-1c940310-9d08-4842-aaa0-0c575fd1aab5.png">
 
-
-
-#### REPO structure
+### Process
 
 ```
-.
-├── main_pipeline.ipynb # pipeline by ipynb
-├── pipe_line_py.py # pipeline by py
-├── README.md
-│
-├── ## main_codes ##
-│   ├── show_congest_sectional_graph.py # 칸별 혼잡도 데이터 전처리 및 그래프 생성
-│   ├── show_congest_graph.py # 역별 혼잡도 데이터 전처리 및 그래프 생성
-│   └── read_data.py # 칸별, 역별 혼잡도 데이터 읽어오기
-│
-├── 1. codes_get_data 
-│   ├── get_congest.py # 역별 혼잡도 데이터 불러오기 api 불러와서 csv로 저장
-│   └── get_congest_subway.py # 칸별 혼잡도 데이터 불러오기 api 불러와서 csv로 저장
-│
-├── 2. prerprocessing
-│   ├── preprocessing_main.py # 역별 혼잡도 전처리 코드
-│   └── preprocessing_congest.py # 칸별 혼잡도 전처리 코드
-│
-├── data
-│   └── StationCode_mapper.csv # 역명에 대한 역명 코드 매퍼
-│
-├── private
-│   ├── _private_.py # api secrete key
-│   └── private.md
-│
-├── ppt
-│   ├── Presentation1.pptx # 발표 자료
-│   └── ~$Presentation1.pptx
-└── utils
-    └── utils.py 
+input
+- 출발 지하철 역
+- 출발 지하철 노선 (except 경의중앙선, 분당선)
+- 가는 방향 (상행선/하행선)
 
-7 directories, 18 files
+process
+1. find next station
+
+2. check and get current_station and next_station data
+    - input 출발 (지하철 역 & 지하철 노선) 데이터가 있는지 확인
+        -> 없다 추출
+    - input 출발 (지하철 역 & 지하철 노선)의 다음역 데이터가 있는지 확인
+        -> 없다 추출
+
+3. informations
+    - 출발역의 혼잡도 시간별 lineplot
+    - 출발역의 칸별 시간별 heatmap
+    - 출발역의 다음역 칸별 하차율 heatmap
+```
+
+### REPO structure
+```
+.
+├── _main_.ipynb            # ** main file ** 
+│
+├── _01_get_api             # 1. get_data_by api
+│   └── get_api_save_json.py
+│
+├── _02_preprocessing       # 2. preprocess json data to dataframe
+│   └── preprocessing.py
+│
+├── _03_data_pipeline       # 3. check_data -> get data -> preprocess data (pipeline)
+│   └── data_pipeline.py
+│
+├── _04_data_eda            # 4. read_data by condition
+│   └── read_data.py
+│
+├── _05_plots               # 5. show information related to data
+│   └── draw_plots.py
+│
+│── raw_data                # json_files
+│
+│── preprocessed_data       # csv_files
+│
+├── metro_graph
+│   └── metro_graph.json
+├── ppt
+│   ├── ASAC_김정우.pptx
+│   └── 지하철혼잡도활용_최적화.pdf
+├── private
+│   ├── _private_.py
+│   └── private.md
+└── 지하철혼잡도활용_최적화.pdf
+
+10 directories, 27 files
 
 ```
