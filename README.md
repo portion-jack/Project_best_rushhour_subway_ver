@@ -23,6 +23,16 @@ Skills
     - using pivot table
 ```
 
+## What I learned
+
+```
+1. insert json in db is not general
+2. awesome way to deal list value in DataFrame
+    - df.explode, df['col'].apply(pd.Series)
+
+```
+
+
 ### Images
 
 <img width="1721" alt="Screen Shot 2022-12-26 at 18 40 48" src="https://user-images.githubusercontent.com/112222918/209533276-72878243-6807-436d-bba5-4b4439c9c468.png">
