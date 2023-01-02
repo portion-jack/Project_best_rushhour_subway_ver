@@ -89,3 +89,11 @@ Process
 └── 지하철혼잡도활용_최적화.pdf
 
 ```
+
+
+## Really nice learn
+
+```
+df.explode('column_name')
+-> append row if data_frame value is list type
+```
