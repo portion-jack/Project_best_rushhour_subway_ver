@@ -65,6 +65,33 @@ Process
 ```
 
 ### REPO structure
+
+(new)
+```
+.
+├── README.md
+├── _main_.ipynb
+├── data_CI.ipynb
+├── data_get.ipynb
+├── data_related
+│   ├── check_data.py
+│   ├── data_read_optimize.ipynb
+│   ├── get_data.py
+│   └── preprocess.py
+├── database_connection.ipynb
+├── depreciated_main_.ipynb
+├── private
+│   ├── _private_.py
+│   └── private.md
+├── problems.md
+└── 지하철혼잡도활용_최적화.pdf
+
+2 directories, 14 files
+
+```
+
+
+(depreciated)
 ```
 .
 ├── _main_.ipynb            # ** main file ** 
